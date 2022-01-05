@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello RecetteController!{% endblock %}
+
+{% block body %}
+<div class="container align-content-center">
+    <br>
+    <br>
+ <h2> listes des Recettes </h2>
+    <br>
+    <br>
+<table class=" table table-striped">
+    <thead>
+        <tr>
+            <td>Recette</td>
+            <td>Nom </td>
+            <td>Description</td>
+        </tr>
+    </thead>
+    <tbody>
+        {% for r in recette %}
+        <tr>
+            <td>{{ r.id }}</td>
+            <td>{{ r.nom }}</td>
+            <td>{{ r.description }}</td>
+        {% endfor %}
+    </tr>
+    </tbody>
+
+</table>
+</div>
+{% endblock %}
